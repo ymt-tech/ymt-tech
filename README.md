@@ -5,19 +5,19 @@
 
 ## About Me
 
-- 🔭 現在は **togenwebapp**（スポーツチーム向けグループウェア）を開発しています
+- 🔭 現在は **スポーツチーム向けグループウェア** を開発しています
 - 🌱 **TypeScript / Next.js / Docker / GitHub Actions** を実践的に学んでいます
 - 💼 **エンジニア** として活動しています（YMT Works）
 - 📫 連絡先: [tech@ymt-works.jp](mailto:tech@ymt-works.jp)
 
-## Featured Project: togenwebapp
+## Featured Project: TogenWebApp
 
 スポーツチームの運営を支えるグループウェアです。
 練習・試合スケジュール、出欠、連絡、チーム内の情報共有といった日常業務を、ひとつの Web アプリにまとめることを目指しています。
 
 | 項目 | 内容 |
 |:--|:--|
-| プロジェクト | **togenwebapp** |
+| プロジェクト | **TogenWebApp** |
 | 概要 | スポーツチーム向けグループウェア |
 | 主な用途 | スケジュール管理 / 出欠確認 / チーム連絡 / 情報共有 |
 | 技術スタック | Next.js, React, TypeScript, Docker, GitHub Actions |
