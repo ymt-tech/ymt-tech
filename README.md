@@ -1,11 +1,11 @@
 # Hi there 👋 I'm 谷許 淳一
 
 ソフトウェアエンジニアとして、技術選定から実装・運用まで一貫した開発体験を大切にしています。
-このプロフィールは、[ポートフォリオ向け GitHub の作り方](https://qiita.com/miruky/items/726d9210cc8666866f86) を参考に整備しています。
+基本的にCursorを使用して開発しております。
 
 ## About Me
 
-- 🔭 現在は **個人向け GitHub ポートフォリオ** の整備を進めています
+- 🔭 現在は **スポーツチームのグループウェア** の整備を進めています
 - 🌱 **TypeScript / Next.js / Docker / GitHub Actions** を実践的に学んでいます
 - 💼 **エンジニア** として活動しています（YMT Works）
 - 📫 連絡先: [tech@ymt-works.jp](mailto:tech@ymt-works.jp)
