@@ -1,14 +1,26 @@
 # Hi there 👋 I'm 谷許 淳一
 
 ソフトウェアエンジニアとして、技術選定から実装・運用まで一貫した開発体験を大切にしています。
-基本的にCursorを使用して開発しております。
+基本的に Cursor を使用して開発しております。
 
 ## About Me
 
-- 🔭 現在は **スポーツチームのグループウェア** の整備を進めています
+- 🔭 現在は **スポーツチーム向けグループウェア** を開発しています
 - 🌱 **TypeScript / Next.js / Docker / GitHub Actions** を実践的に学んでいます
 - 💼 **エンジニア** として活動しています（YMT Works）
 - 📫 連絡先: [tech@ymt-works.jp](mailto:tech@ymt-works.jp)
+
+## Featured Project: TogenWebApp
+
+スポーツチームの運営を支えるグループウェアです。
+練習・試合スケジュール、出欠、連絡、チーム内の情報共有といった日常業務を、ひとつの Web アプリにまとめることを目指しています。
+
+| 項目 | 内容 |
+|:--|:--|
+| プロジェクト | **TogenWebApp** |
+| 概要 | スポーツチーム向けグループウェア |
+| 主な用途 | スケジュール管理 / 出欠確認 / チーム連絡 / 情報共有 |
+| 技術スタック | Next.js, React, TypeScript, Docker, GitHub Actions |
 
 ## Tech Stack
 
@@ -32,14 +44,6 @@
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ymt-tech&show_icons=true&theme=radical)
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ymt-tech&layout=compact&theme=radical)
-
-## Featured Projects
-
-これから公開する個人開発プロジェクトを、ここにピン留め予定です。
-
-| プロジェクト | 説明 | 技術 |
-|:--|:--|:--|
-| Coming soon | README・CI・デモまで揃えた個人開発を準備中 | Next.js, TypeScript, Docker |
 
 ## Development Practices
 
