@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EventType {
+  PRACTICE
+  MATCH
+  MEETING
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  UNANSWERED
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  role         String   @default("coach")
+  createdAt    DateTime @default(now())
+  messages     Message[]
+}
+
+model Team {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+  members   Member[]
+  events    Event[]
+  messages  Message[]
+  posts     BoardPost[]
+}
+
+model Member {
+  id          String             @id @default(cuid())
+  teamId      String
+  name        String
+  role        String
+  team        Team               @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  attendances AttendanceRecord[]
+}
+
+model Event {
+  id          String             @id @default(cuid())
+  teamId      String
+  title       String
+  type        EventType
+  startsAt    DateTime
+  endsAt      DateTime?
+  place       String
+  note        String?
+  team        Team               @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  attendances AttendanceRecord[]
+}
+
+model AttendanceRecord {
+  id       String           @id @default(cuid())
+  eventId  String
+  memberId String
+  status   AttendanceStatus @default(UNANSWERED)
+  event    Event            @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  member   Member           @relation(fields: [memberId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, memberId])
+}
+
+model Message {
+  id        String   @id @default(cuid())
+  teamId    String
+  authorId  String
+  body      String
+  createdAt DateTime @default(now())
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+}
+
+model BoardPost {
+  id        String   @id @default(cuid())
+  teamId    String
+  category  String
+  title     String
+  body      String
+  createdAt DateTime @default(now())
+  team      Team     @relation(fields: [teamId], references: [id], onDelete: Cascade)
+}

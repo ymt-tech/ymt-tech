@@ -3,128 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>チーム管理 デモ | YMT Works</title>
+    <title>チーム管理デモへ移動 | YMT Works</title>
     <meta
-      name="description"
-      content="チーム管理（team-management）の操作デモ。スケジュール・出欠・連絡・情報共有の画面イメージを体験できます。"
+      http-equiv="refresh"
+      content="0;url=https://team-management-demo.onrender.com/login"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/demo.css" />
+    <link rel="canonical" href="https://team-management-demo.onrender.com/login" />
+    <style>
+      :root {
+        --ink: #10231c;
+        --turf: #1f6b4a;
+        --paper: #f3f7f4;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif;
+        color: var(--ink);
+        background: linear-gradient(180deg, #eaf3ee, var(--paper));
+        padding: 1.5rem;
+      }
+      .card {
+        max-width: 28rem;
+        background: #fff;
+        border: 1px solid rgba(16, 35, 28, 0.12);
+        border-radius: 1rem;
+        padding: 1.75rem;
+        text-align: center;
+      }
+      a {
+        color: var(--turf);
+        font-weight: 700;
+      }
+    </style>
   </head>
   <body>
-    <a class="skip-link" href="#app-main">デモ本体へスキップ</a>
-
-    <div class="demo-banner" role="status">
+    <div class="card">
+      <h1>チーム管理デモへ移動中…</h1>
       <p>
-        これはポートフォリオ用の操作デモです。データは保存されません。
-        ソース予定:
-        <a
-          href="https://github.com/ymt-tech/team-management"
-          target="_blank"
-          rel="noopener noreferrer"
-          >team-management</a
+        本番相当のデモ（サンプルDB）は Render 上で公開しています。
+      </p>
+      <p>
+        <a href="https://team-management-demo.onrender.com/login"
+          >デモを開く</a
         >
         /
         <a href="../../index.html#projects">ポートフォリオへ戻る</a>
       </p>
+      <p style="font-size: 0.85rem; opacity: 0.75">
+        初回アクセス時は起動に数十秒かかることがあります。
+      </p>
     </div>
-
-    <div class="app">
-      <aside class="sidebar" aria-label="アプリメニュー">
-        <div class="sidebar__brand">
-          <p class="sidebar__logo">チーム管理</p>
-          <p class="sidebar__team">青葉 FC U-15</p>
-        </div>
-        <nav class="sidebar__nav">
-          <button class="nav-btn is-active" type="button" data-view="schedule" aria-pressed="true">
-            スケジュール
-          </button>
-          <button class="nav-btn" type="button" data-view="attendance" aria-pressed="false">
-            出欠確認
-          </button>
-          <button class="nav-btn" type="button" data-view="messages" aria-pressed="false">
-            チーム連絡
-          </button>
-          <button class="nav-btn" type="button" data-view="board" aria-pressed="false">
-            情報共有
-          </button>
-        </nav>
-        <div class="sidebar__foot">
-          <p>ログイン中: 谷許（コーチ）</p>
-        </div>
-      </aside>
-
-      <div class="app__body">
-        <header class="topbar">
-          <div>
-            <p class="topbar__eyebrow" id="view-eyebrow">Schedule</p>
-            <h1 id="view-title">今週の予定</h1>
-          </div>
-          <div class="topbar__actions">
-            <button class="chip" type="button" id="reset-demo">デモをリセット</button>
-            <a class="chip chip--link" href="../../index.html#projects">Works へ</a>
-          </div>
-        </header>
-
-        <main id="app-main" class="panels">
-          <section class="panel is-active" id="panel-schedule" aria-labelledby="schedule-heading">
-            <h2 class="visually-hidden" id="schedule-heading">スケジュール</h2>
-            <div class="panel__intro">
-              <p>練習・試合・ミーティングを一覧で確認できます。行をクリックすると詳細が出ます。</p>
-            </div>
-            <div class="event-list" id="event-list" role="list"></div>
-            <aside class="detail-card" id="event-detail" aria-live="polite"></aside>
-          </section>
-
-          <section class="panel" id="panel-attendance" aria-labelledby="attendance-heading" hidden>
-            <h2 class="visually-hidden" id="attendance-heading">出欠確認</h2>
-            <div class="panel__intro">
-              <p>
-                対象:
-                <strong id="attendance-event-label">土曜練習（7/19）</strong>
-                — 自分の出欠を切り替えてみてください。
-              </p>
-            </div>
-            <div class="stats" id="attendance-stats" aria-live="polite"></div>
-            <ul class="member-list" id="member-list"></ul>
-          </section>
-
-          <section class="panel" id="panel-messages" aria-labelledby="messages-heading" hidden>
-            <h2 class="visually-hidden" id="messages-heading">チーム連絡</h2>
-            <div class="panel__intro">
-              <p>チーム全体への連絡と返信をデモできます。</p>
-            </div>
-            <div class="thread" id="message-thread" aria-live="polite"></div>
-            <form class="composer" id="message-form">
-              <label class="visually-hidden" for="message-input">メッセージ</label>
-              <input
-                id="message-input"
-                name="message"
-                type="text"
-                maxlength="120"
-                placeholder="連絡を入力（例: 雨天のため室内へ変更）"
-                required
-              />
-              <button class="btn" type="submit">送信</button>
-            </form>
-          </section>
-
-          <section class="panel" id="panel-board" aria-labelledby="board-heading" hidden>
-            <h2 class="visually-hidden" id="board-heading">情報共有</h2>
-            <div class="panel__intro">
-              <p>お知らせ・資料・会場情報をまとめて共有するボードです。</p>
-            </div>
-            <div class="board-grid" id="board-grid"></div>
-          </section>
-        </main>
-      </div>
-    </div>
-
-    <script src="./js/demo.js"></script>
   </body>
 </html>

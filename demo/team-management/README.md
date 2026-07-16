@@ -1,19 +1,8 @@
-# チーム管理 操作デモ
+# チーム管理デモ（誘導ページ）
 
-ポートフォリオ掲載用の静的デモです。スケジュール / 出欠 / 連絡 / 情報共有をブラウザ内だけで体験できます（永続化なし）。
+このディレクトリの静的ページは、Render 上の本番相当デモへ誘導します。
 
-## 関連リポジトリ
-
-| 名前 | URL | 役割 |
-|:--|:--|:--|
-| ポートフォリオ（本デモ） | https://github.com/ymt-tech/ymt-tech | 静的サイト + デモ UI |
-| 実アプリ（予定） | https://github.com/ymt-tech/team-management | 本番相当のアプリ本体 |
-
-## 公開
-
-- GitHub Pages: `/demo/team-management/`
-- Render: リポジトリ直下の `render.yaml`（Blueprint）で Static Site を作成
-
-## ローカル確認
-
-リポジトリルートで静的サーバーを起動し、`/demo/team-management/` を開いてください。
+- アプリ本体: `apps/team-management/`
+- 公開先（想定）: https://team-management-demo.onrender.com/
+- サンプルDB: Render PostgreSQL（seed 済み）
+- ログイン: `demo@ymt-works.jp` / `demo1234`

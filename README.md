@@ -22,9 +22,11 @@
 | プロジェクト | **チーム管理** (`team-management`) |
 | 概要 | スポーツチーム向けグループウェア |
 | 主な用途 | スケジュール管理 / 出欠確認 / チーム連絡 / 情報共有 |
-| 技術スタック | Next.js, React, TypeScript, Docker, GitHub Actions |
-| ソース | [`ymt-tech/team-management`](https://github.com/ymt-tech/team-management)（関連付け予定） |
-| デモ | [`/demo/team-management/`](./demo/team-management/)（ポートフォリオ用・静的） |
+| 技術スタック | Next.js, React, TypeScript, Prisma, PostgreSQL, Render |
+| アプリ本体 | [`apps/team-management/`](./apps/team-management/)（このリポジトリ内） |
+| 関連リポジトリ | [`ymt-tech/team-management`](https://github.com/ymt-tech/team-management)（分割予定） |
+| デモ | [Render で開く](https://team-management-demo.onrender.com/login)（サンプルDB） |
+| デモログイン | `demo@ymt-works.jp` / `demo1234` |
 
 ## Tech Stack
 
@@ -42,6 +44,8 @@
 ![AWS](https://img.shields.io/badge/-AWS-232F3E?style=flat-square&logo=amazonaws)
 ![Docker](https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/-GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)
+![Render](https://img.shields.io/badge/-Render-46E3B7?style=flat-square&logo=render&logoColor=black)
+![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 
 ## GitHub Stats
 
@@ -57,7 +61,7 @@
 - コミット: [Conventional Commits](https://www.conventionalcommits.org/)（例: `feat:`, `fix:`, `docs:`）
 - レビュー: Issue → feature ブランチ → Pull Request → マージ
 
-## GitHub Pages
+## GitHub Pages（ポートフォリオ）
 
 このリポジトリのルートに静的ポートフォリオ（`index.html`）があります。
 
@@ -65,28 +69,25 @@ Settings → Pages → Source: **Deploy from a branch** → Branch: **main** / *
 
 カスタムドメイン例: https://tech.ymt-it.jp/
 
-## Render（推奨: ポートフォリオ用デモ公開）
+## Render（チーム管理デモ = 本番相当 + サンプルDB）
 
-`render.yaml` で Static Site を定義しています。GitHub Pages と並行して Render からも公開できます。
+`render.yaml` で **Web Service + PostgreSQL** を定義しています。静的フェイクUIではなく、アプリがサンプルDBに読み書きします。
 
 1. [Render Dashboard](https://dashboard.render.com/) → **New** → **Blueprint**
 2. このリポジトリ `ymt-tech/ymt-tech` を接続
-3. Blueprint をデプロイ（サービス名: `ymt-tech-portfolio`）
-4. 発行された `*.onrender.com` URL で確認（必要ならカスタムドメインを追加）
+3. Blueprint をデプロイ（`team-management-demo` + `team-management-db`）
+4. https://team-management-demo.onrender.com/login で確認
 
-公開後のデモ URL 例: `https://<service-name>.onrender.com/demo/team-management/`
-
-### team-management との関連付け
-
-| 役割 | リポジトリ | 公開先 |
+| 役割 | 場所 | 公開先 |
 |:--|:--|:--|
-| ポートフォリオ + 操作デモ | このリポジトリ (`ymt-tech`) | GitHub Pages / Render Static Site |
-| 実アプリ（予定） | [`team-management`](https://github.com/ymt-tech/team-management) | Render Web Service（+ PostgreSQL など） |
+| ポートフォリオサイト | リポジトリルート | GitHub Pages |
+| チーム管理デモアプリ | `apps/team-management/` | Render Web Service + Postgres |
 
-実アプリを `team-management` で Render 公開したら、Works の「デモを見る」リンクをその URL に差し替えてください。
+※ Free Postgres は作成から 30 日で期限切れになります。継続する場合は有料プランへアップグレードしてください。
 
 ## Links
 
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ymt-tech)
 [![Portfolio](https://img.shields.io/badge/-Portfolio-1F6B4A?style=flat-square)](https://tech.ymt-it.jp/)
+[![Demo](https://img.shields.io/badge/-Demo-46E3B7?style=flat-square&logo=render&logoColor=black)](https://team-management-demo.onrender.com/login)
 [![Mail](https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:tech@ymt-works.jp)

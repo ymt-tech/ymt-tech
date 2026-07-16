@@ -1,0 +1,7 @@
+
+# App workspaces
+apps/*/node_modules/
+apps/*/.next/
+apps/*/.env
+apps/*/.env.*
+!apps/*/.env.example

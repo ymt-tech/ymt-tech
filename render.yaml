@@ -1,34 +1,36 @@
-# YMT Works ポートフォリオ（静的デモ含む）
-# 関連プロダクトリポジトリ（予定）: https://github.com/ymt-tech/team-management
+# YMT Works — チーム管理デモ（本番相当）
 #
-# デプロイ手順:
-# 1. Render Dashboard → New → Blueprint
-# 2. このリポジトリ (ymt-tech/ymt-tech) を接続
-# 3. Deploy Blueprint
+# Render Dashboard → New → Blueprint → このリポジトリを接続
+# Web Service + PostgreSQL（サンプルデータ付き）が立ち上がります。
 #
-# 将来 team-management に実アプリを置く場合は、
-# そちらを Web Service (+ PostgreSQL) として別途接続し、
-# ポートフォリオの「デモを見る」リンクを実アプリ URL に差し替えてください。
+# デモログイン: demo@ymt-works.jp / demo1234
+# 関連リポジトリ（予定の分割先）: https://github.com/ymt-tech/team-management
+
+databases:
+  - name: team-management-db
+    plan: free
+    databaseName: team_management
+    user: team_management
 
 services:
   - type: web
-    name: ymt-tech-portfolio
-    runtime: static
+    name: team-management-demo
+    runtime: node
     plan: free
     branch: main
-    buildCommand: "true"
-    staticPublishPath: .
+    rootDir: apps/team-management
+    buildCommand: npm ci && npm run build
+    startCommand: npx prisma migrate deploy && npm run db:seed && npm run start
+    healthCheckPath: /api/health
     autoDeployTrigger: commit
     envVars:
-      - key: SKIP_INSTALL_DEPS
-        value: "true"
-    headers:
-      - path: /*
-        name: X-Content-Type-Options
-        value: nosniff
-      - path: /*
-        name: Referrer-Policy
-        value: strict-origin-when-cross-origin
-      - path: /*
-        name: X-Frame-Options
-        value: SAMEORIGIN
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: team-management-db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PORTFOLIO_URL
+        value: https://tech.ymt-it.jp/
