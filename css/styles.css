@@ -460,7 +460,7 @@ a {
 }
 
 .reveal {
-  opacity: 0;
+  opacity: 0.001;
   transform: translateY(28px);
   transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
 }
