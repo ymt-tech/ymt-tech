@@ -4,6 +4,11 @@
     year.textContent = String(new Date().getFullYear());
   }
 
+  const motionQuery = window.matchMedia("(prefers-reduced-motion: no-preference)");
+  if (motionQuery.matches) {
+    document.documentElement.classList.add("has-motion");
+  }
+
   const header = document.querySelector(".site-header");
   const onScroll = () => {
     if (!header) return;
@@ -15,6 +20,10 @@
   const revealTargets = document.querySelectorAll(
     ".section__intro, .feature, .about__grid, .stack__list, .contact .section__lead, .contact__actions"
   );
+
+  if (!motionQuery.matches) {
+    return;
+  }
 
   revealTargets.forEach((el) => el.classList.add("reveal"));
 
