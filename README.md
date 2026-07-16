@@ -3,23 +3,23 @@
 ソフトウェアエンジニアとして、技術選定から実装・運用まで一貫した開発体験を大切にしています。
 基本的に Cursor を使用して開発しております。
 
-🌐 **ポートフォリオ**: [ymt-tech.github.io/ymt-tech](https://ymt-tech.github.io/ymt-tech/)
+🌐 **ポートフォリオ**: [https://tech.ymt-it.jp/](https://tech.ymt-it.jp/)
 
 ## About Me
 
-- 🔭 現在は **スポーツチーム向けグループウェア** を開発しています
+- 🔭 現在は **スポーツチーム向けグループウェア「チーム管理」** を開発しています
 - 🌱 **TypeScript / Next.js / Docker / GitHub Actions** を実践的に学んでいます
 - 💼 **エンジニア** として活動しています（YMT Works）
 - 📫 連絡先: [tech@ymt-works.jp](mailto:tech@ymt-works.jp)
 
-## Featured Project: TogenWebApp
+## Featured Project: チーム管理（team-management）
 
 スポーツチームの運営を支えるグループウェアです。
 練習・試合スケジュール、出欠、連絡、チーム内の情報共有といった日常業務を、ひとつの Web アプリにまとめることを目指しています。
 
 | 項目 | 内容 |
 |:--|:--|
-| プロジェクト | **TogenWebApp** |
+| プロジェクト | **チーム管理**（team-management） |
 | 概要 | スポーツチーム向けグループウェア |
 | 主な用途 | スケジュール管理 / 出欠確認 / チーム連絡 / 情報共有 |
 | 技術スタック | Next.js, React, TypeScript, Docker, GitHub Actions |
@@ -54,12 +54,6 @@
 - ブランチ戦略: `main` / `develop` / `feature/*` / `fix/*` / `docs/*`
 - コミット: [Conventional Commits](https://www.conventionalcommits.org/)（例: `feat:`, `fix:`, `docs:`）
 - レビュー: Issue → feature ブランチ → Pull Request → マージ
-
-## GitHub Pages
-
-このリポジトリのルートに静的ポートフォリオ（`index.html`）があります。
-
-Settings → Pages → Source: **Deploy from a branch** → Branch: **main** / **/ (root)** で公開できます。
 
 ## Links
 
