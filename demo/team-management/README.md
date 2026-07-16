@@ -1,4 +1,4 @@
-# TogenWebApp 操作デモ
+# チーム管理 操作デモ
 
 ポートフォリオ掲載用の静的デモです。スケジュール / 出欠 / 連絡 / 情報共有をブラウザ内だけで体験できます（永続化なし）。
 
@@ -11,9 +11,9 @@
 
 ## 公開
 
-- GitHub Pages: `/demo/togenwebapp/`
+- GitHub Pages: `/demo/team-management/`
 - Render: リポジトリ直下の `render.yaml`（Blueprint）で Static Site を作成
 
 ## ローカル確認
 
-リポジトリルートで静的サーバーを起動し、`/demo/togenwebapp/` を開いてください。
+リポジトリルートで静的サーバーを起動し、`/demo/team-management/` を開いてください。

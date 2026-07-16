@@ -12,19 +12,19 @@
 - 💼 **エンジニア** として活動しています（YMT Works）
 - 📫 連絡先: [tech@ymt-works.jp](mailto:tech@ymt-works.jp)
 
-## Featured Project: TogenWebApp
+## Featured Project: チーム管理
 
 スポーツチームの運営を支えるグループウェアです。
 練習・試合スケジュール、出欠、連絡、チーム内の情報共有といった日常業務を、ひとつの Web アプリにまとめることを目指しています。
 
 | 項目 | 内容 |
 |:--|:--|
-| プロジェクト | **TogenWebApp** |
+| プロジェクト | **チーム管理** (`team-management`) |
 | 概要 | スポーツチーム向けグループウェア |
 | 主な用途 | スケジュール管理 / 出欠確認 / チーム連絡 / 情報共有 |
 | 技術スタック | Next.js, React, TypeScript, Docker, GitHub Actions |
 | ソース | [`ymt-tech/team-management`](https://github.com/ymt-tech/team-management)（関連付け予定） |
-| デモ | [`/demo/togenwebapp/`](./demo/togenwebapp/)（ポートフォリオ用・静的） |
+| デモ | [`/demo/team-management/`](./demo/team-management/)（ポートフォリオ用・静的） |
 
 ## Tech Stack
 
@@ -74,7 +74,7 @@ Settings → Pages → Source: **Deploy from a branch** → Branch: **main** / *
 3. Blueprint をデプロイ（サービス名: `ymt-tech-portfolio`）
 4. 発行された `*.onrender.com` URL で確認（必要ならカスタムドメインを追加）
 
-公開後のデモ URL 例: `https://<service-name>.onrender.com/demo/togenwebapp/`
+公開後のデモ URL 例: `https://<service-name>.onrender.com/demo/team-management/`
 
 ### team-management との関連付け
 
