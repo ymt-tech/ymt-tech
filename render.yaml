@@ -1,0 +1,34 @@
+# YMT Works ポートフォリオ（静的デモ含む）
+# 関連プロダクトリポジトリ（予定）: https://github.com/ymt-tech/team-management
+#
+# デプロイ手順:
+# 1. Render Dashboard → New → Blueprint
+# 2. このリポジトリ (ymt-tech/ymt-tech) を接続
+# 3. Deploy Blueprint
+#
+# 将来 team-management に実アプリを置く場合は、
+# そちらを Web Service (+ PostgreSQL) として別途接続し、
+# ポートフォリオの「デモを見る」リンクを実アプリ URL に差し替えてください。
+
+services:
+  - type: web
+    name: ymt-tech-portfolio
+    runtime: static
+    plan: free
+    branch: main
+    buildCommand: "true"
+    staticPublishPath: .
+    autoDeployTrigger: commit
+    envVars:
+      - key: SKIP_INSTALL_DEPS
+        value: "true"
+    headers:
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
