@@ -367,6 +367,29 @@ a {
   color: var(--ink-soft);
 }
 
+.feature__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+}
+
+.btn--ink {
+  background: var(--turf);
+  color: var(--white);
+}
+
+.btn--ink:hover,
+.btn--ink:focus-visible {
+  background: var(--turf-deep);
+  color: var(--white);
+}
+
+.contact .btn--ink,
+.hero .btn--ink {
+  width: auto;
+}
+
 .text-link {
   display: inline-flex;
   align-items: center;

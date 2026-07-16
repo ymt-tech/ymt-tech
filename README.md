@@ -23,6 +23,7 @@
 | 概要 | スポーツチーム向けグループウェア |
 | 主な用途 | スケジュール管理 / 出欠確認 / チーム連絡 / 情報共有 |
 | 技術スタック | Next.js, React, TypeScript, Docker, GitHub Actions |
+| デモ | [操作デモを開く](https://tech.ymt-it.jp/demo/togenwebapp/) |
 
 ## Tech Stack
 
