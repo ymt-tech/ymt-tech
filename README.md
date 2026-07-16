@@ -3,7 +3,7 @@
 ソフトウェアエンジニアとして、技術選定から実装・運用まで一貫した開発体験を大切にしています。
 基本的に Cursor を使用して開発しております。
 
-🌐 **ポートフォリオ**: [ymt-tech.github.io/ymt-tech](https://ymt-tech.github.io/ymt-tech/)
+🌐 **ポートフォリオ**: [https://tech.ymt-it.jp/](https://tech.ymt-it.jp/)
 
 ## About Me
 
