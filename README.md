@@ -3,6 +3,8 @@
 ソフトウェアエンジニアとして、技術選定から実装・運用まで一貫した開発体験を大切にしています。
 基本的に Cursor を使用して開発しております。
 
+🌐 **ポートフォリオ**: [ymt-tech.github.io/ymt-tech](https://ymt-tech.github.io/ymt-tech/)
+
 ## About Me
 
 - 🔭 現在は **スポーツチーム向けグループウェア** を開発しています
@@ -53,7 +55,14 @@
 - コミット: [Conventional Commits](https://www.conventionalcommits.org/)（例: `feat:`, `fix:`, `docs:`）
 - レビュー: Issue → feature ブランチ → Pull Request → マージ
 
+## GitHub Pages
+
+このリポジトリのルートに静的ポートフォリオ（`index.html`）があります。
+
+Settings → Pages → Source: **Deploy from a branch** → Branch: **main** / **/ (root)** で公開できます。
+
 ## Links
 
 [![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/ymt-tech)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-1F6B4A?style=flat-square)](https://ymt-tech.github.io/ymt-tech/)
 [![Mail](https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:tech@ymt-works.jp)
